@@ -1,0 +1,134 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  --bgStripe:transparent;
+}
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+#scoreBox{
+  display:flex;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+#top-level-table{
+  padding-top:20px;
+  background-color:#f1f1f1;
+  box-shadow:0 0 5px 5px #f1f1f1;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width:800px;
+  height:auto;
+  gap:10px;
+  justify-items:center;
+  align-items:center;
+  margin:auto;
+  padding:1vh 1vw;
+}
+.card-holder{
+  border:1px solid black;
+  padding:0 10px;
+  width:80%;
+  height:25vh;
+  max-width:200px;
+  max-height:110px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  border-radius:20px;
+}
+
+/*
+ * making colors
+*/
+
+.red{
+  --bgColor:red;
+  box-shadow:inset 0 0 0px 5px var(--bgColor);
+}
+.green{
+  --bgColor:darkGreen;
+  box-shadow:inset 0 0 0px 5px var(--bgColor);
+}
+.blue{
+  --bgColor:blue;
+  box-shadow:inset 0 0 0px 5px var(--bgColor);
+}
+
+/*
+ * making shapes
+*/
+
+.oval{
+  border-radius:20px / 40px;
+  width:25%;
+  height: 80%;
+  max-width: 40px;
+  max-height:80px;
+}
+.diamond {
+	position: relative;
+	width: 15vw;
+  height: 25vw;
+  max-width:50px;
+  max-height:50px;
+	transform: rotate(60deg) skewX(30deg) scaleY(.866);
+}
+.squiggle{
+  width:25%;
+  height:80%;
+  max-width:45px;
+  max-height:90px;
+  transform: rotate(5deg) skewX(-25deg) scaleY(.8);
+  border-radius: 80px 30px;
+}
+
+/*
+ * shading
+*/
+
+.striped{
+  background: repeating-linear-gradient(
+    -55deg, var(--bgColor),
+    var(--bgColor) 5px,
+    var(--bgStripe) 6px, var(--bgStripe) 11px);
+}
+.diamond.striped{
+  background: repeating-linear-gradient(
+    90deg, var(--bgColor),
+    var(--bgColor) 5px,
+    var(--bgStripe) 6px, var(--bgStripe) 11px);
+}
+.empty{
+  background-color:var(--bgStripe);
+}
+.solid{
+  background-color:var(--bgColor);
+}
+
+/*
+ * hover and selected effects 
+*/
+.card-holder:hover{
+  box-shadow:0 0 3px 3px grey;
+}
+.selected{
+  --bgStripe:lightgrey;
+  background-color:var(--bgStripe);
+  box-shadow:0 0 3px 3px grey;
+}
+
+/*media queries*/
+@media only screen and (max-width:900px){
+  .card-holder{
+    width:90%;
+  }
+}
