@@ -113,13 +113,14 @@ let handlers = {
     }
   },
   moveCards(){
+    debugger;  
+    //remove blank cards from the end so the next step doesn't pull empty cards
+    while (topLevelTable.lastChild.hasChildNodes() === false){
+      topLevelTable.removeChild(topLevelTable.lastChild);
+    }
+    
     //go through each cell, if it is empty, move items from final cell into the empty one
-    for(var num = 0; num<topLevelTable.childElementCount;num++){
-      //remove blank cards from the end so the next step doesn't pull empty cards
-      while (topLevelTable.lastChild.hasChildNodes() === false){
-        topLevelTable.removeChild(topLevelTable.lastChild);
-      }
-      
+    for(var num = 0; num<topLevelTable.childElementCount;num++){   
       let newCell = document.getElementById("cell"+num);
       //if there are no items in the cell, add in items from the lastChild, then remove the lastChild
       if(newCell.hasChildNodes() === false){
@@ -128,6 +129,9 @@ let handlers = {
             newCell.appendChild(oldCell.firstChild);
           }
         topLevelTable.removeChild(oldCell);
+        while (topLevelTable.lastChild.hasChildNodes() === false){
+          topLevelTable.removeChild(topLevelTable.lastChild);
+        }
       }
     }
     
