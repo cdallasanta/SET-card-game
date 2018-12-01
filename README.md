@@ -25,6 +25,6 @@ Card animations
 
 "look better"
 
-Adding a 5th row when there are no matches
-
 Easy mode (only solids)
+
+Tutorial popup
