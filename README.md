@@ -8,7 +8,7 @@ A SET is three cards where each feature, when looked at individually, is either 
 
 Features
 -----------
-New game button restarts everything, resetting score, the cards left in the deck, and re-dealing.
+New game button restarts everything, resetting score, the cards left in the deck, and redealing.
 
 Hint button highlights a card that is in a set
 
