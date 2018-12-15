@@ -21,6 +21,8 @@ option to add 5th row or more
 
 Upcoming Features
 -----------
+Reorganize methods to be simpler and cleaner
+
 Card animations
 
 "look better"
