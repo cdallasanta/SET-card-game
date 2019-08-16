@@ -5,7 +5,8 @@ How to play
 -----------
 A SET is three cards where each feature, when looked at individually, is either all the same OR all different. Each card contains four features: color (red, purple or green), shape (oval, squiggle or diamond), number (one, two or three) and shading (solid, striped or outlined).
 
-You can try it out yourself in a jsFiddle [here](https://jsfiddle.net/cdallasanta/zqak5934/)
+You can clone this project, then open `index.html` or
+you can try it out yourself in a jsFiddle [here](https://jsfiddle.net/cdallasanta/zqak5934/)
 
 
 Features
