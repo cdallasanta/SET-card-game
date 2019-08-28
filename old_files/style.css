@@ -1,0 +1,55 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  --bgStripe:transparent;
+}
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+#scoreBox{
+  display:flex;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+#top-level-table{
+  padding-top:20px;
+  background-color:#f1f1f1;
+  box-shadow:0 0 5px 5px #f1f1f1;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width:800px;
+  height:auto;
+  gap:10px;
+  justify-items:center;
+  align-items:center;
+  margin:auto;
+  padding:1vh 1vw;
+}
+.card-holder{
+  border:1px solid black;
+  padding:0 10px;
+  width:80%;
+  height:25vh;
+  max-width:200px;
+  max-height:110px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  border-radius:20px;
+}
+
+
+/*media queries*/
+@media only screen and (max-width:900px){
+  .card-holder{
+    width:90%;
+  }
+}

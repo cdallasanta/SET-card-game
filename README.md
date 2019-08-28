@@ -1,6 +1,8 @@
 Set! The family game of visual perception by SET Enterprises.
 =================
 
+*Outdated readme, this is from the old version pre-React*
+
 How to play
 -----------
 A SET is three cards where each feature, when looked at individually, is either all the same OR all different. Each card contains four features: color (red, purple or green), shape (oval, squiggle or diamond), number (one, two or three) and shading (solid, striped or outlined).
