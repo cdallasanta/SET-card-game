@@ -33,18 +33,7 @@ h1 {
   margin:auto;
   padding:1vh 1vw;
 }
-.card-holder{
-  border:1px solid black;
-  padding:0 10px;
-  width:80%;
-  height:25vh;
-  max-width:200px;
-  max-height:110px;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  border-radius:20px;
-}
+
 
 
 /*media queries*/

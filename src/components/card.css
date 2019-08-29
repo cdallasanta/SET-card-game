@@ -1,3 +1,15 @@
+.card{
+  border:1px solid black;
+  padding:0 10px;
+  width:80%;
+  height:25vh;
+  max-width:200px;
+  max-height:110px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  border-radius:20px;
+}
 
 /*
  * making colors
@@ -70,7 +82,7 @@
 /*
  * hover and selected effects 
 */
-.card-holder:hover{
+.card:hover{
   box-shadow:0 0 3px 3px grey;
 }
 .selected{

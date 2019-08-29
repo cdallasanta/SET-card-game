@@ -4,14 +4,22 @@ import { connect } from 'react-redux';
 
 class Board extends React.Component {
   renderCards = () => {
+    console.log(this.props.cards)
     return this.props.cardsInPlay.map(card => {
-      return <Card card={card} />
+      return <Card card={card} key={card.id}/>
     })
+  }
+
+  handleClick = () => {
+    this.props.drawCards();
   }
 
   render(){
     return(
-      this.renderCards()
+      <div>
+        <div onClick={this.handleClick} >Draw</div>
+        {this.renderCards()}
+      </div>
     )
   }
 }
@@ -22,4 +30,10 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Board);
+const mapDispatchToProps = dispatch => {
+  return {
+    drawCards: () => dispatch({type: "DRAW_CARDS"})
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Board);

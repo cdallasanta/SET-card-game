@@ -1,40 +1,40 @@
-let cardsMaster = [];
-let cardsInDeck = [];
+// let cardsMaster = [];
+// let cardsInDeck = [];
 let selectedCells = [];
 let score = 0;
 let topLevelTable = document.getElementById("top-level-table");
 
-const COLORS = ['red', 'blue', 'green'];
-const NUMBERS = [1, 2, 3];
-const SHAPES = ['oval', 'diamond', 'squiggle'];
-const SHADINGS = ['solid', 'striped', 'empty'];
+// const COLORS = ['red', 'blue', 'green'];
+// const NUMBERS = [1, 2, 3];
+// const SHAPES = ['oval', 'diamond', 'squiggle'];
+// const SHADINGS = ['solid', 'striped', 'empty'];
 
 
 let setUp = {
-  createDeck:function(){
-    //this creates the deck of 81 cards and adds to the cardsMaster array. This only runs on startup
-    COLORS.forEach(function(color){
-      NUMBERS.forEach(function(num){
-        SHAPES.forEach(function(shape){
-          SHADINGS.forEach(function(shading){
-            cardsMaster.push({
-              color:color,
-              number:num,
-              shape:shape,
-              shading:shading
-            });
-          });
-        });
-      });
-    });
-  },
-  newDeck:function(){
-    //creates a new array with numbers 0-80 to track which cards are still in the deck
-    cardsInDeck = [];
-    for (var i=0;i<81;i++){
-      cardsInDeck.push(i);
-    }
-  },
+  // createDeck:function(){
+  //   //this creates the deck of 81 cards and adds to the cardsMaster array. This only runs on startup
+  //   COLORS.forEach(function(color){
+  //     NUMBERS.forEach(function(num){
+  //       SHAPES.forEach(function(shape){
+  //         SHADINGS.forEach(function(shading){
+  //           cardsMaster.push({
+  //             color:color,
+  //             number:num,
+  //             shape:shape,
+  //             shading:shading
+  //           });
+  //         });
+  //       });
+  //     });
+  //   });
+  // },
+  // newDeck:function(){
+  //   //creates a new array with numbers 0-80 to track which cards are still in the deck
+  //   cardsInDeck = [];
+  //   for (var i=0;i<81;i++){
+  //     cardsInDeck.push(i);
+  //   }
+  // },
   clearCells: function(){
     //go through all cells, removing all children
     for(var num = 0; num<topLevelTable.childElementCount;num++){
