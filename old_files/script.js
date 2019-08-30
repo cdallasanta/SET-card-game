@@ -65,16 +65,16 @@ let handlers = {
   //   }
     
     //if there are three selected cells, run the comparison method
-    if(selectedCells.length===3){
-      this.runComparison(selectedCells);
+  //   if(selectedCells.length===3){
+  //     this.runComparison(selectedCells);
     
-      for(var num = 0; num<topLevelTable.childElementCount;num++){
-        if(document.getElementById("cell"+num).classList.contains("selected")){
-          document.getElementById("cell"+num).classList.remove("selected");
-        }
-      }
-    }
-  },
+  //     for(var num = 0; num<topLevelTable.childElementCount;num++){
+  //       if(document.getElementById("cell"+num).classList.contains("selected")){
+  //         document.getElementById("cell"+num).classList.remove("selected");
+  //       }
+  //     }
+  //   }
+  // },
   // dealCards:function(){
   //   let tableLength = topLevelTable.childElementCount;
   //   //go through each cell and do ______
@@ -108,9 +108,9 @@ let handlers = {
   //   }
     
     //check if a match is present
-    if(hints.matchOnTable() === false){
-      alert("There are no matches left.");
-    }
+    // if(hints.matchOnTable() === false){
+    //   alert("There are no matches left.");
+    // }
   // },
   // moveCards(){
   //   debugger;  
