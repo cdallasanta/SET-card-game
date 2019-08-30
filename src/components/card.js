@@ -2,10 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import './card.css';
 
-const Card = ({card: {id, color, number, shape, shading}, selected}) => {
+const Card = ({card: {id, color, number, shape, shading}, selected, dispatch}) => {
   function renderCard() {
     const cardContents = [];
-    debugger;
     for(let i = 0; i < number; i++){
       cardContents.push(<div className={`${color} ${shading} ${shape}`} key={i} />);
     }
@@ -13,8 +12,9 @@ const Card = ({card: {id, color, number, shape, shading}, selected}) => {
     return cardContents
   }
 
-  function handleClick() {
-    this.props.selectCard(id)
+  const handleClick = () => {
+    dispatch({type: "SELECT_CARD", payload: id});
+    debugger;
   }
 
   return (
@@ -25,10 +25,4 @@ const Card = ({card: {id, color, number, shape, shading}, selected}) => {
 
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    selectCard: card => dispatch({type: "SELECT_CARD", payload: card})
-  }
-}
-
-export default connect(null, mapDispatchToProps)(Card);
+export default connect()(Card);
