@@ -12,12 +12,12 @@ const Card = ({card: {id, color, number, shape, shading}, selected}) => {
     return cardContents
   }
 
-  function handleClick(event) {
-    debugger;
+  function handleClick() {
+    this.props.selectCard(id)
   }
 
   return (
-    <div className={`card${selected ? " selected" : ""}`} id={`cell-${id}`} onClick={() => handleClick} >
+    <div className={`card${selected ? " selected" : ""}`} id={id} onClick={ => handleClick(e)} >
       {renderCard()}
     </div>
   )
