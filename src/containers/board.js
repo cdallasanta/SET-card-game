@@ -4,9 +4,8 @@ import { connect } from 'react-redux';
 
 class Board extends React.Component {
   renderCards = () => {
-    console.log(this.props.cards)
     return this.props.cardsInPlay.map(card => {
-      return <Card card={card} key={card.id}/>
+      return <Card card={card} key={card.id} selected={this.props.selectedCards.includes(card)} />
     })
   }
 
@@ -26,7 +25,8 @@ class Board extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    cardsInPlay: state.cardsInPlay
+    cardsInPlay: state.cardsInPlay,
+    selectedCards: state.selectedCards
   }
 }
 

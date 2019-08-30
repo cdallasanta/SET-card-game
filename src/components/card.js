@@ -1,27 +1,33 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import './card.css';
 
-class Card extends React.Component {
-  state = {
-    selected: false
-  }
-
-  renderCard = () => {
+const Card = ({card: {id, color, number, shape, shading}, selected}) => {
+  function renderCard() {
     const cardContents = [];
-    for(let i = 0; i < this.props.card.number; i++){
-      cardContents.push(<div className={`${this.props.card.color} ${this.props.card.shading} ${this.props.card.shape}`} key={i} />);
+    for(let i = 0; i < number; i++){
+      cardContents.push(<div className={`${color} ${shading} ${shape}`} key={i} />);
     }
 
     return cardContents
   }
 
-  render(){
-    return (
-      <div className="card" id={`cell-${this.props.card.id}`}>
-        {this.renderCard()}
-      </div>
-    )
+  function handleClick(event) {
+    debugger;
+  }
+
+  return (
+    <div className={`card${selected ? " selected" : ""}`} id={`cell-${id}`} onClick={() => handleClick} >
+      {renderCard()}
+    </div>
+  )
+
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    selectCard: card => dispatch({type: "SELECT_CARD", payload: card})
   }
 }
 
-export default Card;
+export default connect(null, mapDispatchToProps)(Card);
