@@ -5,6 +5,7 @@ import './card.css';
 const Card = ({card: {id, color, number, shape, shading}, selected}) => {
   function renderCard() {
     const cardContents = [];
+    debugger;
     for(let i = 0; i < number; i++){
       cardContents.push(<div className={`${color} ${shading} ${shape}`} key={i} />);
     }
@@ -17,7 +18,7 @@ const Card = ({card: {id, color, number, shape, shading}, selected}) => {
   }
 
   return (
-    <div className={`card${selected ? " selected" : ""}`} id={id} onClick={ => handleClick(e)} >
+    <div className={`card${selected ? " selected" : ""}`} id={id} onClick={handleClick} >
       {renderCard()}
     </div>
   )
