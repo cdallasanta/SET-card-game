@@ -226,4 +226,4 @@ topLevelTable.addEventListener("click", function(event){
   }
 });
 
-setUp.createDeck();
+// setUp.createDeck();
