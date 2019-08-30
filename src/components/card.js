@@ -15,7 +15,7 @@ const Card = ({card: {id, color, number, shape, shading}, selected}) => {
   function handleClick(event) {
     debugger;
   }
-//  test
+
   return (
     <div className={`card${selected ? " selected" : ""}`} id={`cell-${id}`} onClick={() => handleClick} >
       {renderCard()}
