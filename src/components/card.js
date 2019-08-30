@@ -14,7 +14,6 @@ const Card = ({card: {id, color, number, shape, shading}, selected, dispatch}) =
 
   const handleClick = () => {
     dispatch({type: "SELECT_CARD", payload: id});
-    debugger;
   }
 
   return (

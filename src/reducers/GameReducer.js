@@ -40,6 +40,12 @@ function GameReducer(state = initState, action){
         cardsInPlay: [...state.cardsInPlay, ...newCards],
         deck: state.deck.slice(3)
       }
+    case "SELECT_CARD":
+      const newCard = state.cardsInPlay.find(c => c.id === action.payload);
+      return {
+        ...state,
+        selectedCards: [...state.selectedCards, newCard]
+      }
     default:
       return state;
   }

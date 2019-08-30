@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 class Board extends React.Component {
   renderCards = () => {
     return this.props.cardsInPlay.map((card, i) => {
+      debugger;
       return <Card card={card} key={i} selected={this.props.selectedCards.includes(card)} />
     })
   }
